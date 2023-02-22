@@ -7,10 +7,10 @@ env:
   tag_new_version: "${GITHUB_SHA}" 
 
   # Sonar stuff, please update accordingly 
-  enable_sonar:    "true"
-  sonar_organization: "mysonar-cube"
-  sonar_projectKey: "mysonar-cube_sonarqube-for-project"
-  sonar_login: "5de3dc3260db317d3ba41a284bf1f294571fcca4"
+#   enable_sonar:    "true"
+#   sonar_organization: "mysonar-cube"
+#   sonar_projectKey: "mysonar-cube_sonarqube-for-project"
+#   sonar_login: "5de3dc3260db317d3ba41a284bf1f294571fcca4"
 
 name: ContinuousDelivery
 
@@ -38,16 +38,16 @@ jobs:
       - name: Clone a repo
         run: |
           git clone ${{ env.repo }}  
-      - name: Setup sonarqube
-        if: ${{env.enable_sonar == 'true'}}
-        uses: warchant/setup-sonar-scanner@v3
-      - name: Run sonarqube
-        if: ${{env.enable_sonar == 'true'}}
-        run: sonar-scanner
-            -Dsonar.organization=${{ env.sonar_organization }}                              
-            -Dsonar.projectKey=${{ env.sonar_projectKey }}                         
-            -Dsonar.login=${{ env.sonar_login }}                                   
-            -Dsonar.host.url=https://sonarcloud.io
+#       - name: Setup sonarqube
+#         if: ${{env.enable_sonar == 'true'}}
+#         uses: warchant/setup-sonar-scanner@v3
+#       - name: Run sonarqube
+#         if: ${{env.enable_sonar == 'true'}}
+#         run: sonar-scanner
+#             -Dsonar.organization=${{ env.sonar_organization }}                              
+#             -Dsonar.projectKey=${{ env.sonar_projectKey }}                         
+#             -Dsonar.login=${{ env.sonar_login }}                                   
+#             -Dsonar.host.url=https://sonarcloud.io
 
       # Runs a set of commands using the runners shell
       - name: Switch Branches
