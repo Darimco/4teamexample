@@ -1,12 +1,12 @@
 env:
   region:             "us-central1"
-  app_name:           "pet-clinic"
+  app_name:           "ots"
   app_version:        ${GITHUB_SHA} 
-  app_port:            "8080"
+  app_port:            "3000"
   project_id:         "${{ secrets.PROJECT_ID }}"
-  repository:         "us-central1-docker.pkg.dev/${{ secrets.PROJECT_ID }}/pet-clinic/pet-clinic"
+  repository:         "us-central1-docker.pkg.dev/${{ secrets.PROJECT_ID }}/team4/ots"
   cluster_name:       "project-cluster"
-  helm_repository:    "https://github.com/Malik20A/custom_helm_chart.git"
+  helm_repository:    "https://github.com/Darimco/custom_helm_chart.git"
   google_domain_name: "${{ secrets.GOOGLE_DOMAIN_NAME }}"
   environment:        "dev"
   
