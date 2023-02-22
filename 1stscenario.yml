@@ -1,9 +1,9 @@
 env:
-  repo:            "https://github.com/Malik20A/pet-clinic.git" 
-  app_version:     "main"
+  repo:            "https://github.com/Luzifer/ots.git" 
+  app_version:     "1.0.0"
   repo_region:     "us-central1"
   project_id:      "${{ secrets.PROJECT_ID }}" 
-  app_name:        "pet-clinic"
+  app_name:        "ots"
   tag_new_version: "${GITHUB_SHA}" 
 
   # Sonar stuff, please update accordingly 
